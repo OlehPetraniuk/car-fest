@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-spa-header',
+  selector: 'spa-header',
   templateUrl: './spa-header.component.html',
   styleUrls: ['./spa-header.component.css']
 })

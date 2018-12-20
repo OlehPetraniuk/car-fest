@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-spa-content',
+  selector: 'spa-content',
   templateUrl: './spa-content.component.html',
   styleUrls: ['./spa-content.component.css']
 })
