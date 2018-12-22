@@ -1,3 +1,9 @@
-<p>
-  icon-bar works!
-</p>
+<a *ngFor="let icon a spaConfigService.socialIcons" [href]="icon.url" 
+[title]='icon.alt' target='_blank'>
+<img class='top-img' [src]="icon.imageFile" [alt]="icon.alt"></a>
+
+<div *ngIf="spaConfigService.showUserControls">
+  <span>User name</span>
+  <button *ngIf="!showLoader" class="btn btn-sm btn-warning" (click)='signOut()'>Sign Out</button>
+  <img src='src/imgs/loaderOut.gif' *ngIf="showLoader">
+</div>
