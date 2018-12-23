@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SpaConfigService} from '../services/spa-config.service';
+import { SpaConfigService } from '../services/spa-config.service';
 
 @Component({
   selector: 'icon-bar',
@@ -8,7 +8,6 @@ import {SpaConfigService} from '../services/spa-config.service';
 })
 export class IconBarComponent implements OnInit {
   showLoader: boolean;
-
   constructor(private spaConfigService: SpaConfigService) { }
 
   ngOnInit() {
@@ -16,5 +15,4 @@ export class IconBarComponent implements OnInit {
   signOut() {
     console.log('Sign out');
   }
-
 }
