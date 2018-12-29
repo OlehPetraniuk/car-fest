@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MenuItem, MenuService } from 'src/spa/services/menu.service';
 
 @Component({
-  selector: 'menu-item',
+  selector: 'spa-menu-item',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css']
 })
 export class MenuItemComponent implements OnInit {
-
-  constructor() { }
+  @Input() item: MenuItem;
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
   }
