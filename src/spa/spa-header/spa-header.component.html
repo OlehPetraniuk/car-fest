@@ -2,7 +2,7 @@
   <img src="src/imgs/logo.png" alt="Car fest logo">
   <div class="menu-area">
     <icon-bar></icon-bar>
-      <!-- <spa-menu></spa-menu> -->
+    <spa-menu *ngIf="!menuService.isVertical"></spa-menu>
 
 
   </div>
