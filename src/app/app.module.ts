@@ -7,6 +7,8 @@ import { SpaModule } from 'src/spa/spa.module';
 import { AppHomeComponent } from './routes/app-home/app-home.component';
 import { CarsComponent } from './routes/cars/cars.component';
 import { SettingsComponent } from './routes/settings/settings.component';
+import { RouterModule } from '../../node_modules/@angular/router';
+import { appRoutes } from './routes/app.routes';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { SettingsComponent } from './routes/settings/settings.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SpaModule
+    SpaModule, RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
