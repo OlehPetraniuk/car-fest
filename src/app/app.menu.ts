@@ -42,8 +42,19 @@ submenu: null}
 },
 {text: 'Maintenance',
 icon: 'src/imgs/settings.png',
-route: '/settings',
+route: null,
+submenu: [
+    {text: 'Car maint',
+icon: 'src/imgs/settings.png',
+route: '/car-maint',
 submenu: null},
+{text: 'Settings',
+icon: 'src/imgs/settings.png',
+route: '/settings',
+submenu: null}
+]},
+
+
 {text: 'Home',
 icon: 'src/imgs/home.png',
 route: '/home',
