@@ -53,10 +53,8 @@ icon: 'src/imgs/settings.png',
 route: '/settings',
 submenu: null}
 ]},
-
-
 {text: 'Home',
 icon: 'src/imgs/home.png',
 route: '/home',
 submenu: null},
-]
+];
