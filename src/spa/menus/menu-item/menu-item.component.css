@@ -59,3 +59,32 @@
     outline: none;
     background-color: rgba(247, 58, 58, 0.8)
 }
+
+:host(.vertical-menu.in-popup) {
+    padding-left: 14px;
+}
+
+span span button {
+    margin: 3px 0px 3px 5px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+
+span.dropdown,
+span.dropleft,
+span.dropright {
+    float: right;
+}
+
+span.dropdown>button.dropdown-toggle::after {
+    border-top-color: #fff;
+}
+
+span.dropright>button.dropdown-toggle::after {
+    border-left-color: #fff;
+}
+
+span.dropleft>button.dropdown-toggle::before {
+    border-right-color: #fff;
+}
