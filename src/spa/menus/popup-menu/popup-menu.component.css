@@ -8,7 +8,7 @@
     box-shadow: 2px 2px 5px #bcbcbc;
 }
 
-:host(.vertical-menu){
+:host(.vertical-menu) {
     position: static;
     display: block;
     width: 100%;

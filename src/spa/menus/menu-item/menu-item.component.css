@@ -6,7 +6,7 @@
     margin-bottom: 0;
     padding: 0;
     font-size: 16px;
-    line-height: 6px;
+    /* line-height: 6px; */
     color: #eee;
     cursor: pointer;
     box-sizing: border-box;
@@ -57,7 +57,8 @@
 
 .active {
     outline: none;
-    background-color: rgba(247, 58, 58, 0.8)
+    transform: scale(1.05);
+    background-color: rgba(247, 58, 58, 0.8);
 }
 
 :host(.vertical-menu.in-popup) {

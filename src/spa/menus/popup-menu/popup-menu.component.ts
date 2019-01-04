@@ -7,9 +7,8 @@ import { MenuService, MenuItem } from '../../services/menu.service';
   styleUrls: ['./popup-menu.component.css']
 })
 export class PopupMenuComponent implements OnInit {
-  @Input() menu: Array<MenuItem>
-
-  constructor() { }
+  @Input() menu: Array<MenuItem>;
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
   }
