@@ -11,7 +11,17 @@ export class UserService implements UserApi {
 
     }
 
-    signIn(email: string, password: string): Observable<any>{}
-    signOut(): Observable<any> {}
+    signIn(email: string, password: string): Observable<any>{
+        if (email === 'test@gmail.com' && password === '123')
+        {
+        this.isAuthenticated = true;
+        return of({}).pipe(delay(2000));
+    } else {return throwError('Invalid email or password');}
+    }
+    signOut(): Observable<any> {
+        this.isAuthenticated = false;
+        this.router.navigate(['/sign-in']);
+        return of({});
+    }
     
 }
