@@ -10,9 +10,8 @@ export class UserService implements UserApi {
     constructor(private router:  Router) {
 
     }
-
-    signIn(email: string, password: string): Observable<any>{
-        if (email === 'test@gmail.com' && password === '123')
+    signIn(email: string, password: string): Observable<any> {
+        if (email === 'test@mail.ru' && password === '123')
         {
         this.isAuthenticated = true;
         return of({}).pipe(delay(2000));
@@ -23,5 +22,4 @@ export class UserService implements UserApi {
         this.router.navigate(['/sign-in']);
         return of({});
     }
-    
 }
