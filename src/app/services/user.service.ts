@@ -6,7 +6,7 @@ import {delay} from 'rxjs/operators';
 
 @Injectable()
 export class UserService implements UserApi {
-    isAuthenticated = true;
+    isAuthenticated = false;
     constructor(private router:  Router) {
 
     }
