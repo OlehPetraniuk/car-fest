@@ -11,7 +11,7 @@ export class UserService implements UserApi {
 
     }
     signIn(email: string, password: string): Observable<any> {
-        if (email === 'test@mail.ru' && password === '123')
+        if (email === 'test@gmail.com' && password === '123')
         {
         this.isAuthenticated = true;
         return of({}).pipe(delay(2000));
