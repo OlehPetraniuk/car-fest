@@ -6,6 +6,9 @@ import {delay, catchError} from 'rxjs/operators';
 
 @Injectable()
 export class AppDataService {
+  deleteCar(id: number): any {
+    throw new Error("Method not implemented.");
+  }
     private CarsCollection: Array<Car> =[
         {id: 1, name: "Ford", model: "Focus", price: 4500 },
         {id: 2, name: "Mazda", model: "626", price: 900 },

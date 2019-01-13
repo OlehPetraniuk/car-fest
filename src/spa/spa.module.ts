@@ -27,7 +27,7 @@ import { DynamicFormComponent } from './dynamicForms/dynamic-form/dynamic-form.c
     MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent,
     DynamicFieldComponent, DynamicFormComponent
 ],
-    exports: [SpaBodyComponent],
+    exports: [SpaBodyComponent, DynamicFormComponent],
     providers: [SpaConfigService, ScreenService, MenuService]
 })
 export class SpaModule {}
