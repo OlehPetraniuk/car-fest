@@ -63,4 +63,13 @@ export class CarDetailComponent implements OnInit {
     );
   }
 
+  updateCar(car: Car) {
+    this.errorMessage = null;
+    this.appDataService.updateCar(car).subscribe(
+      c => this.router.navigate(['/authenticated/car-maint']),
+      error => this.errorMessage ='Error updating car'
+    );
+
+  }
+
 }
