@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { UserService } from './user.service';
 import { Car } from './car-interface';
 import { Observable, of, throwError } from 'rxjs';
-import {delay, catchError} from 'rxjs/operators';
+import {delay, map, catchError} from 'rxjs/operators';
 
 @Injectable()
 export class AppDataService {
-  deleteCar(id: number): any {
-    throw new Error("Method not implemented.");
-  }
+
     private CarsCollection: Array<Car> =[
         {id: 1, name: "Ford", model: "Focus", price: 4500 },
         {id: 2, name: "Mazda", model: "626", price: 900 },
@@ -28,5 +26,21 @@ export class AppDataService {
     getCar(id: number): Observable<Car> {
         const car = this.CarsCollection.find(item => item.id === id);
         return of(car);
+    }
+
+    deleteCar( id: number): Observable<any> {
+        return of({}).pipe(delay(2000), map(()=> this.CarsCollection.splice(this.CarsCollection.findIndex(item => item.id === id), 1)));
+    }
+
+    createCar(newCar: Car): Observable<any> {
+        let id=0;
+        this.CarsCollection.forEach(item => {
+            if(item.id >= id) {
+                id = item.id + 1;
+            }
+        });
+        newCar.id = id;
+        this.CarsCollection.push(newCar);
+        return of(newCar);
     }
 }
