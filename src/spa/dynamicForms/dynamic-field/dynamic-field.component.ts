@@ -10,15 +10,15 @@ import { FieldInput } from '../field-interface';
 export class DynamicFieldComponent implements OnInit {
   @Input() field: FieldInput;
   @Input() form: FormGroup;
-  @Input() operation: string;
-  @Input() submitted: boolean;
-  get isValid() {
-    return this.form.controls[this.field.key].valid;
-  }
-
+@Input() operation: string;
+@Input() submitted: boolean;
+get isValid() {
+  return this.form.controls[this.field.key].valid;
+}
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
