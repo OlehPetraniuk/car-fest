@@ -16,6 +16,7 @@ import { UserService } from './services/user.service';
 import { UserApi } from '../spa/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
+import { CarPanelComponent } from './car-panel/car-panel.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppDataService } from './services/app-data.service';
     CarDetailComponent,
     CarListComponent,
     CarMaintComponent,
-    AuthenticatedComponent
+    AuthenticatedComponent,
+    CarPanelComponent
   ],
   imports: [
     BrowserModule,
