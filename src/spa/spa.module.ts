@@ -28,7 +28,7 @@ import { PanelComponent } from './panel/panel.component';
     MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent,
     DynamicFieldComponent, DynamicFormComponent, PanelComponent
 ],
-    exports: [SpaBodyComponent, DynamicFormComponent,  PanelComponent],
+    exports: [SpaBodyComponent, DynamicFormComponent,  PanelComponent, ScreenLargeDirective, ScreenSmallDirective],
     providers: [SpaConfigService, ScreenService, MenuService]
 })
 export class SpaModule {}
