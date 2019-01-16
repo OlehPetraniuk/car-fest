@@ -16,7 +16,8 @@ import { UserService } from './services/user.service';
 import { UserApi } from '../spa/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
-import { CarPanelComponent } from './car-panel/car-panel.component';
+import { FormsModule } from '@angular/forms';
+import { CarPanelComponent } from './panels/car-panel/car-panel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { CarPanelComponent } from './car-panel/car-panel.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SpaModule, RouterModule.forRoot(appRoutes)
+    SpaModule, RouterModule.forRoot(appRoutes), FormsModule
   ],
   providers: [UserService, {
     provide: UserApi, useExisting: UserService
