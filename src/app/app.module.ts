@@ -18,7 +18,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
 import { FormsModule } from '@angular/forms';
 import { CarPanelComponent } from './panels/car-panel/car-panel.component';
-import { ImagePanelComponent } from './image-panel/image-panel.component';
+import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 
 @NgModule({
   declarations: [
