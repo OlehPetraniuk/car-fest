@@ -3,11 +3,12 @@ import { FieldInput } from '../../../spa/dynamicForms/field-interface';
 import { Car } from '../../services/car-interface';
 import { AppDataService } from '../../services/app-data.service';
 import {ActivatedRoute, Router} from '@angular/router';
-
+import { visibility } from '../../../spa/services/animations';
 @Component({
   selector: 'app-car-detail',
   templateUrl: './car-detail.component.html',
-  styleUrls: ['./car-detail.component.css']
+  styleUrls: ['./car-detail.component.css'],
+  animations: [visibility]
 })
 export class CarDetailComponent implements OnInit {
   car: Car;
