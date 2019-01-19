@@ -1,0 +1,34 @@
+{
+    "cars": [
+        {
+            "id":1,
+            "name": "Audi",
+            "model": "A6",
+            "price": 3500
+        },
+        {
+            "id":2,
+            "name": "BMW",
+            "model": "X5",
+            "price": 5500
+        },
+        {
+            "id":3,
+            "name": "Mazda",
+            "model": "363",
+            "price": 1500
+        },
+        {
+            "id":4,
+            "name": "Chery",
+            "model": "QQ",
+            "price": 900
+        },
+        {
+            "id":5,
+            "name": "Fiat",
+            "model": "Doblo",
+            "price": 4000
+        }
+    ]
+}
