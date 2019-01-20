@@ -27,24 +27,20 @@ export class AppDataService {
     }
 
     deleteCar( id: number): Observable<any> {
-        return of({}).pipe(delay(2000), map(()=> this.CarsCollection.splice(this.CarsCollection.findIndex(item => item.id === id), 1)));
+        return this.http.delete(this.url + '/' + id).pipe(map((response: Response) => {
+            response.json();
+        }), delay(1200));
     }
 
     createCar(newCar: Car): Observable<any> {
-        let id=0;
-        this.CarsCollection.forEach(item => {
-            if(item.id >= id) {
-                id = item.id + 1;
-            }
-        });
-        newCar.id = id;
-        this.CarsCollection.push(newCar);
-        return of(newCar);
+        return this.http.post(this.url, newCar).pipe(map((response: Response) => {
+            response.json();
+        }), delay(1000));
     }
 
     updateCar(CarForUpdating: Car) :Observable<any>{
-        const car = this.CarsCollection.find(item => item.id === CarForUpdating.id);
-        Object.assign(car, CarForUpdating);
-        return of(car).pipe(delay(1200));
+        return this.http.put(this.url +'/' + CarForUpdating.id, CarForUpdating).pipe(map((response: Response) => {
+            response.json();
+        }), delay(1000));
     }
 }
