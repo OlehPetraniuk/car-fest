@@ -9,10 +9,9 @@ import { User } from '../../spa/services/user.interface';
 @Injectable()
 export class UserService implements UserApi {
     isAuthenticated = false;
-    dataTransfer: Array<any>;
+   
     private url='http://localhost:3000/users';
     constructor(private router:  Router, private http: Http) {
-        this.dataTransfer = null;
     }
     signIn(email: string, password: string): Observable<any> {
         return this.http.get(this.url).pipe(delay(2000), map((response: Response) => {
@@ -26,6 +25,7 @@ export class UserService implements UserApi {
         }
     signOut(): Observable<any> {
         this.isAuthenticated = false;
+        localStorage.clear();
         this.router.navigate(['/sign-in']);
         return of({});
     }
