@@ -20,7 +20,8 @@ export class UserService implements UserApi {
             if ( arrayFilter.length !== 0) {
                 this.isAuthenticated = true;
                 localStorage.setItem('user', JSON.stringify(arrayFilter[0]));
-            } else {return throwError('Invalid email or password');
+            } else {
+                throw new Error('Invalid email or password');
         }}));
         }
     signOut(): Observable<any> {
