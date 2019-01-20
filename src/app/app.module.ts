@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpModule} from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpaModule } from 'src/spa/spa.module';
@@ -35,7 +35,7 @@ import { ImagePanelComponent } from './panels/image-panel/image-panel.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SpaModule, RouterModule.forRoot(appRoutes), FormsModule
+    SpaModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule
   ],
   providers: [UserService, {
     provide: UserApi, useExisting: UserService
