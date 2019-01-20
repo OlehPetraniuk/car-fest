@@ -51,7 +51,7 @@ export class CarDetailComponent implements OnInit {
     if( this.operation === 'create') {
       this.car = { id: 0, name: '', model: '', price: null};
     } else {
-      this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: Car) => this.car = car);
+      this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: Car) => this.car = car[0]);
     }
   }
 
