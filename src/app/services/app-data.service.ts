@@ -3,29 +3,27 @@ import { UserService } from './user.service';
 import { Car } from './car-interface';
 import { Observable, of, throwError } from 'rxjs';
 import {delay, map, catchError} from 'rxjs/operators';
+import { Http, Response } from '@angular/http';
 
 @Injectable()
 export class AppDataService {
 
-    private CarsCollection: Array<Car> =[
-        {id: 1, name: "Ford", model: "Focus", price: 4500 },
-        {id: 2, name: "Mazda", model: "626", price: 900 },
-        {id: 3, name: "Chery", model: "QQ", price: 1200 },
-        {id: 4, name: "Audi", model: "A6", price: 2200 },
-        {id: 5, name: "BMW", model: "X5", price: 14500 },
-        {id: 6, name: "Fiat", model: "Doblo", price: 2400 }
-    ];
+    private CarsCollection: Array<Car>;
+    private url = 'http://localhost:3000/cars';
 
-
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private http: Http) {
 
     }
     getCars(): Observable<Car[]> {
-        return of(this.CarsCollection);
+        return this.http.get(this.url).pipe(map((response: Response) => {
+            this.CarsCollection = response.json();
+            return this.CarsCollection;
+        }), catchError((error: Response) => throwError('Server do not response')));
     }
     getCar(id: number): Observable<Car> {
-        const car = this.CarsCollection.find(item => item.id === id);
-        return of(car);
+        return this.http.get(this.url).pipe(map((response: Response) => {
+            return response.json().filter((itemCar: Car) => itemCar.id === id);
+        }), catchError((error: Response) => throwError('Server do not response')));
     }
 
     deleteCar( id: number): Observable<any> {
