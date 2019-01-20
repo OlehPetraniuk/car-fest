@@ -30,5 +30,19 @@
       "model": "Doblo",
       "price": 4000
     }
+  ],
+  "users": [
+    {
+      "name": "Alex",
+      "email": "alex@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Serhey",
+      "email": "patokha@gmail.com",
+      "password": "12345",
+      "id": 2
+    }
   ]
 }
