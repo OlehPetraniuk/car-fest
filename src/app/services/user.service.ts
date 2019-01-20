@@ -3,10 +3,14 @@ import { UserApi } from '../../spa/users/user-api';
 import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
 import {delay} from 'rxjs/operators';
+import { Http} from '@angular/http';
+import { User } from '../../spa/services/user.interface';
 
 @Injectable()
 export class UserService implements UserApi {
     isAuthenticated = false;
+    dataTransfer: Array<any>;
+    private url='localhost:3000/users';
     constructor(private router:  Router) {
 
     }
