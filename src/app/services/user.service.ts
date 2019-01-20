@@ -29,4 +29,9 @@ export class UserService implements UserApi {
         this.router.navigate(['/sign-in']);
         return of({});
     }
+
+    registerUser(registerForm: User) {
+        return this.http.post(this.url, {name: registerForm.name, email: registerForm.email,
+        password: registerForm.password});
+    }
 }
