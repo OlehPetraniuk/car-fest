@@ -22,7 +22,7 @@
       <p *ngIf="deleteError">{{deleteError}}</p>
     </td>
     <td class='col-lg-4 col-sm-4 col-3' *ngIf="item.id === deleteId && isDeleting">Deleting ...
-      <img src="src/imgs/deleteLoader.gif">
+      <img class="deleting">
     </td>
   </tr>
 </table>

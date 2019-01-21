@@ -10,3 +10,7 @@ table {
     width: 60px;
     margin-left: 5px;
 }
+
+.deleting {
+    background-image: url('src/imgs/deleteLoader.gif');
+}

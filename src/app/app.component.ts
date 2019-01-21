@@ -13,9 +13,9 @@ export class AppComponent {
    const config: SpaConfigSettings = {
      socialIcons: [
        {imageFile: 'src/imgs/facebook.png', alt: 'Facebook', url: 'http://facebook.com'},
-       {imageFile: 'src/imgs/instagram.png', alt: 'Instargram', url: 'http://www.instagram.com'},
-       {imageFile: 'src/imgs/twitter.png', alt: 'Twitter', url: 'http://twitter.com'},
-       {imageFile: 'src/imgs/whatsapp.png', alt: 'WhatsApp', url: 'http://www.whatsapp.com'},
+       {imageFile: '/src/imgs/instagram.png', alt: 'Instargram', url: 'http://www.instagram.com'},
+       {imageFile: '/src/imgs/twitter.png', alt: 'Twitter', url: 'http://twitter.com'},
+       {imageFile: '/src/imgs/whatsapp.png', alt: 'WhatsApp', url: 'http://www.whatsapp.com'},
      ],
      showUserControls: true
    };

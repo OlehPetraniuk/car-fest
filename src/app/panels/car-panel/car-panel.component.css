@@ -20,6 +20,7 @@
 .car-img {
     width: 80px;
     margin: 8px;
+    background-image: url('src/imgs/car.png');
 }
 
 .car-name,
@@ -62,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('src/imgs/car.png');
 }
 
 .car-img-small img {
