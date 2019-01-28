@@ -33,10 +33,16 @@
   ],
   "users": [
     {
-      "name": "Alex",
+      "name": "Alex Boldunin",
       "email": "alex@gmail.com",
       "password": "12345",
-      "id": 3
+      "id": 1
+    },
+    {
+      "name": "Serhey Patoka",
+      "email": "serhey@gmail.com",
+      "password": "12345",
+      "id": 2
     }
   ]
 }
