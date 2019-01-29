@@ -29,6 +29,18 @@
       "name": "Fiat",
       "model": "Doblo",
       "price": 4000
+    },
+    {
+      "id": 6,
+      "name": "Porshe",
+      "model": "Panamero",
+      "price": 57000
+    },
+    {
+      "id": 7,
+      "name": "Tesla",
+      "model": "s3",
+      "price": 24000
     }
   ],
   "users": [
