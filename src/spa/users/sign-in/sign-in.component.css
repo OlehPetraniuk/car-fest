@@ -10,9 +10,9 @@
 }
 
 .sign-in-form {
-    min-width: 290px;
+    min-width: 289px;
     background-color: rgb(194, 204, 207);
-    opacity: 0.9;
+    opacity: 0.8;
     padding: 20px;
     margin: 5px 10px;
     border-radius: 10% 0;
